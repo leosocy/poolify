@@ -1,0 +1,47 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: fix-byte-order-marker
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.2.1
+    hooks:
+      - id: add-trailing-comma
+  - repo: https://github.com/asottile/seed-isort-config
+    rev: v2.2.0
+    hooks:
+      - id: seed-isort-config
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        additional_dependencies:
+          - toml
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - pep8-naming
+          - mccabe
+          - flake8-bugbear
+          - flake8-builtins
+          - flake8-commas
+          - flake8-comprehensions
+          - flake8-pytest
+          - flake8-mock
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.31.0
+    hooks:
+      - id: pyupgrade
+        args: [ "--py36-plus" ]
+  - repo: https://github.com/psf/black
+    rev: 21.12b0
+    hooks:
+      - id: black
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a4
+    hooks:
+      - id: pylint
