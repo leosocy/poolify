@@ -25,5 +25,5 @@ force_grid_wrap = 0
 combine_as_imports = true
 known_future_library = []
 known_standard_library = ""
-known_third_party = []
+known_third_party = ["setuptools"]
 known_first_party = ""

@@ -41,7 +41,3 @@ repos:
     rev: 21.12b0
     hooks:
       - id: black
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.0.0a4
-    hooks:
-      - id: pylint
